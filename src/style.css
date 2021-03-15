@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url('../img/time-lapse-photo-of-stars-on-night-924824.jpg') center center / cover no-repeat fixed;
+}
+.wrap{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+   calculator
+ */
+.calculator{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 320px;
+    height: 530px;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(130px, auto) repeat(5, 80px);
+    overflow: hidden;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.calculator > button{
+    cursor: pointer;
+    color: #fff;
+    font-size: 2rem;
+    border: 1px solid rgba(234,141,99,.9);
+    background: rgba(240,172,115,.9);
+    outline: none;
+}
+.calculator > button:hover{
+    background: rgba(240,172,115,1);
+}
+.output{
+    grid-column: 1/ -1;
+    background: rgba(234,141,99,.9);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.output .pre{
+    color: rgba(255, 255, 255, .7);
+    font-size: 1.5rem;
+}
+.output .cur{
+    color: #fff;
+    font-size: 2.5rem;
+}
